@@ -28,6 +28,8 @@ ny rad
 
 fungera först. Testa att skapa objekt direkt, och använda funktionerna i dem. Hur mycket av funktionaliteten kan du få till och testa utan att använda Console.ReadLine() och Console.WriteLine()? 
 
+Hej det är MAX!!!!!!!!!!
 Hej världen
 Hej det är MAX!!!!!!!!!!
 MASSA KONFLIKT
+Tobias skrev detta
