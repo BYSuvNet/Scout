@@ -17,7 +17,7 @@ class Activity
                 scouts += scout.Name + "\n";
             }
 
-            return "Aktivitet:" + Name + "\nDatum: " + Date.ToShortDateString() + "\n" + scouts;
+            return "HÄNDELSE:" + Name + "\nDatum: " + Date.ToShortDateString() + "\n" + scouts;
         }
     }
 
