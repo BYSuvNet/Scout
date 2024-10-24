@@ -70,6 +70,7 @@ class ScoutRepository //Medlemslista
         foreach (var scout in _scouts)
         {
             Console.WriteLine("Låtsas maila till: " + scout.Email);
+            //Hej Victor
         }
     }
 }
