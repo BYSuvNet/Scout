@@ -36,9 +36,6 @@ Jodå här skrivs massa kod
 123456
 
 Testar nvim merge konflikt
-<<<<<<< HEAD
-=======
 123tyazsf
->>>>>>> 60533a87c83144eebf205d5cd4cb6ce96a2f7a38
 
 Någon skit
