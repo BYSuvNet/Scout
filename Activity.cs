@@ -1,5 +1,6 @@
 namespace ScoutApp.Core;
 
+//Model for activity
 class Activity
 {
     public string Name { get; set; }
