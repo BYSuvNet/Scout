@@ -14,7 +14,7 @@ class ScoutRepository //Medlemslista
         {
             Name = name,
             Email = email,
-            DateOfBirth = birthdate // OldShit!
+            DateOfBirth = birthdate // hej
         };
         _scouts.Add(scout);
         return true;
