@@ -23,10 +23,3 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 * I filen "Program.cs" skapa och lägg till några scouter i repository-klassen med AddScout, skapa och lägg till en aktivitet, lägg till några deltagare till aktiviteten med AddParticipant(), visa genomförda aktiviteter genom att anropa GetPastActivities() och skriv ut info om aktiviteten och deltagarna med Console.WriteLine
 
 **OBS** Att göra ett användargränssnitt där man kan göra dessa saker mer dynamiskt och inte "hårdkodat" är valfritt. Fokusera på att få klasserna att fungera först. Testa att skapa objekt direkt, och använda funktionerna i dem. Hur mycket av funktionaliteten kan du få till och testa utan att använda Console.ReadLine() och Console.WriteLine()?
-
-Erik Rahmanovic 2.0
-Erik Sarajärvi 1.0
-Erik Lindgren 2.1
-Vedin Rahmanovic 2.0
-Vedin Rahmanovic 2.0
-Vedin Rahmanovic 2.0
