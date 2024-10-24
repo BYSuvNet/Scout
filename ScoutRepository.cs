@@ -10,6 +10,8 @@ class ScoutRepository //Medlemslista
         if (string.IsNullOrWhiteSpace(name)) return false;
         if (string.IsNullOrWhiteSpace(email)) return false;
 
+        Console.WriteLine("Merger är mysko brush");
+
         Scout scout = new()
         {
             Name = name,
