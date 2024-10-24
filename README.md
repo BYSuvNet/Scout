@@ -28,3 +28,4 @@ Arvid
 Krister
 Therese
 Rasmus
+Krister Karhu
