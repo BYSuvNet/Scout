@@ -2,6 +2,7 @@ namespace ScoutApp.Core;
 
 class Activity
 {
+    //Göra dem till private??
     public string Name { get; set; }
     public DateTime Date { get; set; }
     public List<Scout> Participants { get; set; } = new();  //Se till så att en tom lista finns
