@@ -64,7 +64,7 @@ static class Input
             {
                 return email;
             }
-            Console.WriteLine("E-postadressen inte giltig!");
+            Console.WriteLine("E-postadressen inte giltig! Försök igen");
         } while (true);
     }
 
