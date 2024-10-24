@@ -20,11 +20,14 @@ class ScoutRepository //Medlemslista
         return true;
     }
 
+    //
     public void AddActivity(Activity activity)
     {
         //TODO Kolla om scout-objektet är ok innan vi lägger in det
         _activities.Add(activity);
     }
+
+    //Lägger till en scout som deltagare i en specifik aktivitet
 
     public void RegisterParticipantToActivity(int scoutId, int activityID)
     {
