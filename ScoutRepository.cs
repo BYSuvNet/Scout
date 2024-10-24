@@ -7,6 +7,7 @@ class ScoutRepository //Medlemslista
 
     public bool AddScout(string name, string email, DateOnly birthdate)
     {
+        // detta är en nödvändig kommentar.
         if (string.IsNullOrWhiteSpace(name)) return false;
         if (string.IsNullOrWhiteSpace(email)) return false;
 
