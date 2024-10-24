@@ -43,6 +43,7 @@ class ScoutRepository //Medlemslista
 
     public List<Activity> GetAllActivities()
     {
+        //Hämta alla roliga Bear Grylls liknande survival aktiviteter!
         return _activities;
     }
 
@@ -53,7 +54,7 @@ class ScoutRepository //Medlemslista
 
     public List<Scout> GetAllScouts()
     {
-        return _scouts;
+        return _scouts; // Hämtar alla scouter
     }
 
     public List<Activity> GetUpcomingActivities()
@@ -70,7 +71,7 @@ class ScoutRepository //Medlemslista
         return upcomingActivities;
     }
 
-    public void SendEmailsToAllScouts()
+    public void SendEmailsToAllScouts() // Sluta låtsas maila
     {
         foreach (var scout in _scouts)
         {
