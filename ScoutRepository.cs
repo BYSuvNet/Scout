@@ -48,7 +48,7 @@ class ScoutRepository //Medlemslista
 
     public List<Scout> GetAllScouts()
     {
-        return _scouts;
+        return _scouts; // Hämtar alla scouter
     }
 
     public List<Activity> GetUpcomingActivities()
