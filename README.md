@@ -27,3 +27,6 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 Niklas Sarajärvi 1.0
 Niklas Sarajärvi 1.0
 Niklas Sarajärvi 1.0
+Vedin Rahmanovic 2.0
+Vedin Rahmanovic 2.0
+Vedin Rahmanovic 2.0
