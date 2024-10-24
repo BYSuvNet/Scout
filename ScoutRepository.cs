@@ -10,6 +10,8 @@ class ScoutRepository //Medlemslista
         if (string.IsNullOrWhiteSpace(name)) return false;
         if (string.IsNullOrWhiteSpace(email)) return false;
 
+        Console.WriteLine("Merger är mysko brush");
+
         Scout scout = new()
         {
             Name = name,
@@ -18,10 +20,12 @@ class ScoutRepository //Medlemslista
         };
         _scouts.Add(scout);
         return true;
+        // lite text i addscout
     }
 
     public void AddActivity(Activity activity)
     {
+        //Erik addactivity kommentar liksom
         //TODO Kolla om scout-objektet är ok innan vi lägger in det
         _activities.Add(activity);
     }
@@ -43,7 +47,7 @@ class ScoutRepository //Medlemslista
 
     public Scout GetScoutById(int scoutId)
     {
-        return _scouts[scoutId];
+        return _scouts[scoutId]; //Vedins kommentar
     }
 
     public List<Scout> GetAllScouts()
