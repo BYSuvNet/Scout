@@ -35,6 +35,10 @@ Här inne skrivs inte kod
 Jodå här skrivs massa kod
 123456
 
+<<<<<<< HEAD
 Testar nvim merge konflikt
+=======
+123tyazsf
+>>>>>>> b520ce84d3494957519f83570334074d502e4a5a
 
 Någon skit
