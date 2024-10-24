@@ -28,5 +28,5 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 Rasmus nordin 123
 Elin
 Sebastian
-
+*text*
 Här inne skrivs inte kod
