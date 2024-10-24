@@ -1,5 +1,7 @@
 namespace ScoutApp.UI;
 
+//Rasmus Nordin What
+
 static class Input
 {
     public static char GetChar(string prompt = "", bool toUpper = true)
