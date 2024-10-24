@@ -2,6 +2,7 @@ namespace ScoutApp.Core;
 
 class Activity
 {
+    //Göra dem till private??
     public string Name { get; set; }
     public DateTime Date { get; set; }
     public List<Scout> Participants { get; set; } = new();  //Se till så att en tom lista finns
@@ -16,7 +17,7 @@ class Activity
                 scouts += scout.Name + "\n";
             }
 
-            return "Aktivitet:" + Name + "\nDatum: " + Date.ToShortDateString() + "\n" + scouts;
+            return "HÄNDELSE:" + Name + "\nDatum: " + Date.ToShortDateString() + "\n" + scouts;
         }
     }
 

@@ -3,7 +3,7 @@ namespace ScoutApp.Core;
 class ScoutRepository //Medlemslista
 {
     List<Scout> _scouts = new();
-    List<Activity> _activities = new();
+    List<Activity> _activities = new();//hej
 
     public bool AddScout(string name, string email, DateOnly birthdate)
     {
@@ -14,17 +14,20 @@ class ScoutRepository //Medlemslista
         {
             Name = name,
             Email = email,
-            DateOfBirth = birthdate
+            DateOfBirth = birthdate // hej
         };
         _scouts.Add(scout);
         return true;
     }
 
+    //
     public void AddActivity(Activity activity)
     {
         //TODO Kolla om scout-objektet är ok innan vi lägger in det
         _activities.Add(activity);
     }
+
+    //Lägger till en scout som deltagare i en specifik aktivitet
 
     public void RegisterParticipantToActivity(int scoutId, int activityID)
     {
@@ -51,7 +54,7 @@ class ScoutRepository //Medlemslista
         return _scouts;
     }
 
-    public List<Activity> GetUpcomingActivities()
+    public List<Activity> GetUpcomingActivities() // Ger oss kommande aktiviteter
     {
         List<Activity> upcomingActivities = new();
         foreach (var activity in _activities)
@@ -65,7 +68,7 @@ class ScoutRepository //Medlemslista
         return upcomingActivities;
     }
 
-    public void SendEmailsToAllScouts()
+    public void SendEmailsToAllScouts() //Hej & välkommen till hajk! Utökar här litegranna! 
     {
         foreach (var scout in _scouts)
         {

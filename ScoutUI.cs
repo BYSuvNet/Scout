@@ -1,3 +1,4 @@
+using System.Text.Json;
 using ScoutApp.Core;
 namespace ScoutApp.UI;
 
@@ -76,6 +77,7 @@ class ScoutUI
     private void RegisterScout()
     {
         Console.Clear();
+        
         string name = Input.GetString("Namn: ");
         string email = Input.GetEmail("E-post: ");
         DateOnly dob = Input.GetDateOnly("Födelsedatum: ");
