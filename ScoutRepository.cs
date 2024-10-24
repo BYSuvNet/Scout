@@ -28,11 +28,13 @@ class ScoutRepository //Medlemslista
 
     public void RegisterParticipantToActivity(int scoutId, int activityID)
     {
+
         _activities[activityID].Participants.Add(_scouts[scoutId]);
     }
 
     public Activity GetActivityById(int activityID)
     {
+        //Hämta aktivitet med ID-nummer. Know de ID number before using dis
         return _activities[activityID];
     }
 
