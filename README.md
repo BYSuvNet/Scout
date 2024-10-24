@@ -30,3 +30,4 @@ fungera först. Testa att skapa objekt direkt, och använda funktionerna i dem. 
 
 Hej världen
 Hej det är MAX!!!!!!!!!!
+MASSA KONFLIKT
