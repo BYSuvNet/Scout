@@ -24,6 +24,7 @@ class ScoutRepository //Medlemslista
 
     public void AddActivity(Activity activity)
     {
+        //Erik addactivity kommentar liksom
         //TODO Kolla om scout-objektet är ok innan vi lägger in det
         _activities.Add(activity);
     }
