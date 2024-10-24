@@ -4,6 +4,7 @@ static class Input
 {
     public static char GetChar(string prompt = "", bool toUpper = true)
     {
+        //arvid
         do
         {
             Console.Write(prompt);
@@ -24,13 +25,13 @@ static class Input
             {
                 return input;
             }
-            Console.WriteLine("Du måste ange något!");
+            Console.WriteLine("Du måste en meningsfull mening!");//Git övning
         } while (true);
     }
 
     public static DateTime GetDateTime(string prompt = "")
     {
-        do
+        do  //:(
         {
             Console.Write(prompt);
             if (DateTime.TryParse(Console.ReadLine(), out DateTime date))
@@ -64,13 +65,13 @@ static class Input
             {
                 return email;
             }
-            Console.WriteLine("E-postadressen inte giltig!");
+            Console.WriteLine("E-postadressen inte giltig! Försök igen");
         } while (true);
     }
 
     //https://www.reddit.com/r/csharp/comments/sbvlgp/is_using_systemnetmailmailaddress_enough_to/
     private static bool IsValidEmail(string email)
     {
-        return System.Text.RegularExpressions.Regex.IsMatch(email, @"^\w+([-+.']\w+)*@(\[*\w+)([-.]\w+)*\.\w+([-.]\w+\])*$");
+        return System.Text.RegularExpressions.Regex.IsMatch(email, @"^\w+([-+.']\w+)*@(\[*\w+)([-.]\w+)*\.\w+([-.]\w+\])*$");//Väldigt användbar SPARA!!!!!
     }
 }

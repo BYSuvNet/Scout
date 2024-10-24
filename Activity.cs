@@ -25,4 +25,5 @@ class Activity
         Name = name;
         Date = date;
     }
+    //HEJ!
 }
