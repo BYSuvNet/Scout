@@ -71,6 +71,6 @@ static class Input
     //https://www.reddit.com/r/csharp/comments/sbvlgp/is_using_systemnetmailmailaddress_enough_to/
     private static bool IsValidEmail(string email)
     {
-        return System.Text.RegularExpressions.Regex.IsMatch(email, @"^\w+([-+.']\w+)*@(\[*\w+)([-.]\w+)*\.\w+([-.]\w+\])*$");
+        return System.Text.RegularExpressions.Regex.IsMatch(email, @"^\w+([-+.']\w+)*@(\[*\w+)([-.]\w+)*\.\w+([-.]\w+\])*$");//Väldigt användbar SPARA!!!!!
     }
 }
