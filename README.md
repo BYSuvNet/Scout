@@ -27,7 +27,7 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 
 Bearice
 
-Mitt namn är Patrik!!
+Mitt namn är Patrik!! 1000år
 
 Martin
 
