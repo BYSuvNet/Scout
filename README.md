@@ -26,3 +26,4 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 
 Vedin Rahmanovic 2.0
 
+Erik Lindgren 2.1
