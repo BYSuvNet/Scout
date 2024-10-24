@@ -20,6 +20,7 @@ class ScoutRepository //Medlemslista
         };
         _scouts.Add(scout);
         return true;
+        // lite text i addscout
     }
 
     public void AddActivity(Activity activity)
