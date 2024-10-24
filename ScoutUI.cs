@@ -78,8 +78,8 @@ class ScoutUI
         Console.Clear();
         string name = Input.GetString("Namn: ");
         string email = Input.GetEmail("E-post: ");
-        DateOnly dob = Input.GetDateOnly("Födelsedatum: ");
-        _repo.AddScout(name, email, dob);
+        DateOnly dateOfBirth = Input.GetDateOnly("Födelsedatum: ");
+        _repo.AddScout(name, email, dateOfBirth);
         Console.WriteLine("Scouten är registrerad!");
         Console.ReadKey();
     }

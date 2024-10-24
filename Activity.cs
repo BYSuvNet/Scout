@@ -1,6 +1,6 @@
 namespace ScoutApp.Core;
 
-class Activity
+class Activity // kommentar av patrik 11:20
 {
     public string Name { get; set; }
     public DateTime Date { get; set; }
