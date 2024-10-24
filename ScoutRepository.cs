@@ -33,11 +33,17 @@ class ScoutRepository //Medlemslista
 
     public Activity GetActivityById(int activityID)
     {
+        int i = 1;
+        if (i == 1)
+        {
+            return _activities[activityID];
+        }
         return _activities[activityID];
     }
 
     public List<Activity> GetAllActivities()
     {
+        //Hämta alla roliga Bear Grylls liknande survival aktiviteter! och skjut heroin
         return _activities;
     }
 
@@ -48,7 +54,7 @@ class ScoutRepository //Medlemslista
 
     public List<Scout> GetAllScouts()
     {
-        return _scouts;
+        return _scouts; // Hämtar alla scouter
     }
 
     public List<Activity> GetUpcomingActivities()
@@ -65,7 +71,7 @@ class ScoutRepository //Medlemslista
         return upcomingActivities;
     }
 
-    public void SendEmailsToAllScouts()
+    public void SendEmailsToAllScouts() // Sluta låtsas maila
     {
         foreach (var scout in _scouts)
         {

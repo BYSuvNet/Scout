@@ -6,6 +6,7 @@ class Activity
     public DateTime Date { get; set; }
     public List<Scout> Participants { get; set; } = new();  //Se till så att en tom lista finns
 
+    // Kommentar utan anledning
     public string Info
     {
         get

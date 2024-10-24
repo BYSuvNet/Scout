@@ -1,6 +1,6 @@
 namespace ScoutApp.Core;
 
-class Scout
+class Scout // Make better
 {
     public string Name { get; set; }
     public string Email { get; set; }
