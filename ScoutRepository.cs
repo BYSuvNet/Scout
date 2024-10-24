@@ -51,7 +51,7 @@ class ScoutRepository //Medlemslista
         return _scouts;
     }
 
-    public List<Activity> GetUpcomingActivities()
+    public List<Activity> GetUpcomingActivities() // Ger oss kommande aktiviteter
     {
         List<Activity> upcomingActivities = new();
         foreach (var activity in _activities)
