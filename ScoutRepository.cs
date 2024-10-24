@@ -7,6 +7,7 @@ class ScoutRepository //Medlemslista
 
     public bool AddScout(string name, string email, DateOnly birthdate)
     {
+        // detta är en nödvändig kommentar.
         if (string.IsNullOrWhiteSpace(name)) return false;
         if (string.IsNullOrWhiteSpace(email)) return false;
 
@@ -28,11 +29,13 @@ class ScoutRepository //Medlemslista
 
     public void RegisterParticipantToActivity(int scoutId, int activityID)
     {
+
         _activities[activityID].Participants.Add(_scouts[scoutId]);
     }
-
+    //bajsbajsbajs
     public Activity GetActivityById(int activityID)
     {
+        //Hämta aktivitet med ID-nummer. Know de ID number before using dis
         return _activities[activityID];
     }
 
@@ -70,6 +73,7 @@ class ScoutRepository //Medlemslista
         foreach (var scout in _scouts)
         {
             Console.WriteLine("Låtsas maila till: " + scout.Email);
+            //Hej Victor
         }
     }
 }

@@ -2,6 +2,12 @@ namespace ScoutApp.UI;
 
 static class Input
 {
+    /// <summary>
+    /// Den här metoden gettar en char!!!!
+    /// </summary>
+    /// <param name="prompt"></param>
+    /// <param name="toUpper"></param>
+    /// <returns></returns>
     public static char GetChar(string prompt = "", bool toUpper = true)
     {
         do

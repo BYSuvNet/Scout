@@ -28,6 +28,7 @@ class ScoutUI
         Console.WriteLine("C: Skapa aktivitet");
         Console.WriteLine("D: Kommande aktiviteter");
         Console.WriteLine("Q: Avsluta");
+        Console.WriteLine("King kong Victor skrev");
     }
 
     private void MakeChoice(char input)
