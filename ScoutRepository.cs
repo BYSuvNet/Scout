@@ -5,7 +5,7 @@ class ScoutRepository //Medlemslista
     List<Scout> _scouts = new();
     List<Activity> _activities = new();
 
-    public bool AddScout(string name, string email, DateOnly birthdate)
+    public bool AddScout(string name, string email, DateOnly birthdate) //kommentar Patrik 11:35
     {
         if (string.IsNullOrWhiteSpace(name)) return false;
         if (string.IsNullOrWhiteSpace(email)) return false;
