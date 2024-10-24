@@ -27,3 +27,6 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 Erik Rahmanovic 2.0
 Erik Sarajärvi 1.0
 Erik Lindgren 2.1
+Vedin Rahmanovic 2.0
+Vedin Rahmanovic 2.0
+Vedin Rahmanovic 2.0
