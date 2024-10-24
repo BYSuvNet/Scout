@@ -28,5 +28,6 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 Hej / T
 Detta var kårngligt!
 
+hyffsat ändå 
 
 
