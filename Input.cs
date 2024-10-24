@@ -24,7 +24,7 @@ static class Input
             {
                 return input;
             }
-            Console.WriteLine("Du måste ange något!");
+            Console.WriteLine("Du måste en meningsfull mening!");//Git övning
         } while (true);
     }
 
