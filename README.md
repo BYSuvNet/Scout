@@ -15,7 +15,6 @@ Vi i Bengtsfors Scoutförening organiserar många aktiviteter för våra medlemm
 Vi kommer behöva två klasser: en för att hålla reda på scouter och en för att hålla reda på aktiviteter.
 Vi behöver också en klass som håller reda på scouter och aktiviteter, så att det inte behöver ligga i koden för användargränssnittet.
 
-- Skapa klassen Scout i filen "Scout.cs" och ge den följande egenskaper: Name, Email, Phone och Birthdate. Vilka typer är lämpliga för dessa egenskaper?
 
 - Skapa klassen "Activity" i filen "Activity.cs" och ge den följande egenskaper: Name, Date, Location, Participants och Notes. Ge den också en metod "AddParticipant(Scout s)" som lägger till en scout i listan Participants.
 
@@ -28,3 +27,5 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 Rasmus nordin
 Elin
 Sebastian
+
+- Skapa klassen Scout i filen "Scout.cs" och ge den följande egenskaper: Name, Email, Phone och Birthdate. Vilka typer är lämpliga för dessa egenskaper?
