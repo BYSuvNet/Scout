@@ -55,7 +55,7 @@ class ScoutUI
     private void ShowAllActivities()
     {
         Console.Clear();
-        Console.WriteLine("KOMMANDE AKTIVITETER:");
+        Console.WriteLine("KOMMANDE AKTIVITETER ATT SE FRAM EMOT:");
         foreach (var activity in _repo.GetUpcomingActivities())
         {
             Console.WriteLine(activity.Info);
