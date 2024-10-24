@@ -43,7 +43,7 @@ class ScoutRepository //Medlemslista
 
     public List<Activity> GetAllActivities()
     {
-        //Hämta alla roliga Bear Grylls liknande survival aktiviteter!
+        //Hämta alla roliga Bear Grylls liknande survival aktiviteter! och skjut heroin
         return _activities;
     }
 
