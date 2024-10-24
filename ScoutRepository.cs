@@ -65,7 +65,7 @@ class ScoutRepository //Medlemslista
         return upcomingActivities;
     }
 
-    public void SendEmailsToAllScouts()
+    public void SendEmailsToAllScouts() //Hej & välkommen till hajk!
     {
         foreach (var scout in _scouts)
         {
