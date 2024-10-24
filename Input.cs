@@ -31,7 +31,7 @@ static class Input
 
     public static DateTime GetDateTime(string prompt = "")
     {
-        do
+        do  //:(
         {
             Console.Write(prompt);
             if (DateTime.TryParse(Console.ReadLine(), out DateTime date))
