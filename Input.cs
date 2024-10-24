@@ -4,6 +4,7 @@ static class Input
 {
     public static char GetChar(string prompt = "", bool toUpper = true)
     {
+        //arvid
         do
         {
             Console.Write(prompt);
