@@ -25,7 +25,7 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 
 **OBS** Att göra ett användargränssnitt där man kan göra dessa saker mer dynamiskt och inte "hårdkodat" är valfritt. Fokusera på att få klasserna att fungera först. Testa att skapa objekt direkt, och använda funktionerna i dem. Hur mycket av funktionaliteten kan du få till och testa utan att använda Console.ReadLine() och Console.WriteLine()?
 
-Bearice
+Bearice 32 år
 
 Mitt namn är Patrik!! 1000år
 
