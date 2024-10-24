@@ -26,7 +26,7 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 **OBS** Att göra ett användargränssnitt där man kan göra dessa saker mer dynamiskt och inte "hårdkodat" är valfritt. Fokusera på att få klasserna att fungera först. Testa att skapa objekt direkt, och använda funktionerna i dem. Hur mycket av funktionaliteten kan du få till och testa utan att använda Console.ReadLine() och Console.WriteLine()?
 
 Rasmus nordin 123
-Elin
+Elin T
 Sebastian
 _text_
 Här inne skrivs inte kod
@@ -35,6 +35,7 @@ Här inne skrivs inte kod
 Jodå här skrivs massa kod
 123456
 
+Testar nvim merge konflikt
 123tyazsf
 
 Någon skit
