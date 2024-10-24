@@ -1,4 +1,4 @@
-# SCOUT
+# SCOUT och Chycjlingar Nu ska Kicklingar vara med i scouterna också.
 
 ## Projektbeskrivning
 
