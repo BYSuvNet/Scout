@@ -3,7 +3,7 @@ namespace ScoutApp.Core;
 class ScoutRepository //Medlemslista
 {
     List<Scout> _scouts = new();
-    List<Activity> _activities = new();
+    List<Activity> _activities = new();//hej
 
     public bool AddScout(string name, string email, DateOnly birthdate)
     {
