@@ -4,6 +4,7 @@ static class Input
 {
     public static char GetChar(string prompt = "", bool toUpper = true)
     {
+        //arvid
         do
         {
             Console.Write(prompt);
@@ -64,7 +65,7 @@ static class Input
             {
                 return email;
             }
-            Console.WriteLine("E-postadressen inte giltig!");
+            Console.WriteLine("E-postadressen inte giltig! Försök igen");
         } while (true);
     }
 
