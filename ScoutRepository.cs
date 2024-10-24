@@ -5,7 +5,7 @@ class ScoutRepository //Medlemslista
     List<Scout> _scouts = new();
     List<Activity> _activities = new();
 
-    public bool AddScout(string name, string email, DateOnly birthdate)
+    public bool AddScout(string name, string email, DateOnly birthdate) //kommentar Patrik 11:35
     {
         if (string.IsNullOrWhiteSpace(name)) return false;
         if (string.IsNullOrWhiteSpace(email)) return false;
@@ -43,7 +43,7 @@ class ScoutRepository //Medlemslista
 
     public Scout GetScoutById(int scoutId)
     {
-        return _scouts[scoutId];
+        return _scouts[scoutId]; // Detta är en kommentar.
     }
 
     public List<Scout> GetAllScouts()
@@ -69,7 +69,7 @@ class ScoutRepository //Medlemslista
     {
         foreach (var scout in _scouts)
         {
-            Console.WriteLine("Låtsas maila till: " + scout.Name + scout.Email);
+            Console.WriteLine("Maila till: " + scout.Email);
         }
     }
 }
