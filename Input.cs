@@ -74,3 +74,5 @@ static class Input
         return System.Text.RegularExpressions.Regex.IsMatch(email, @"^\w+([-+.']\w+)*@(\[*\w+)([-.]\w+)*\.\w+([-.]\w+\])*$");
     }
 }
+
+// hojt
