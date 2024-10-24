@@ -26,3 +26,4 @@ Vi behöver också en klass som håller reda på scouter och aktiviteter, så at
 
 Alexander
 Hallå är ni där?
+Hej / T
