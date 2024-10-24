@@ -69,7 +69,7 @@ class ScoutRepository //Medlemslista
     {
         foreach (var scout in _scouts)
         {
-            Console.WriteLine("Låtsas maila till: " + scout.Email);
+            Console.WriteLine("Låtsas maila till: " + scout.Name + scout.Email);
         }
     }
 }
