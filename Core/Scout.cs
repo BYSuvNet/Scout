@@ -10,15 +10,25 @@ public class Scout
     {
         get
         {
-            return (int)((DateTime.Now - DateOfBirth.ToDateTime(new TimeOnly(12, 0))).TotalDays / 365.25);
+            var today = DateTime.Today;
+            var birthDate = DateOfBirth.ToDateTime(new TimeOnly(12, 0));
+            int age = today.Year - birthDate.Year;
+
+            // Justera om födelsedagen inte har inträffat ännu i år
+            if (birthDate > today.AddYears(-age))
+            {
+                age--;
+            }
+
+            return age;
         }
     }
 
     public Scout(string name, string email, DateOnly dateOfBirth)
     {
-        if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Name cannot be null or empty");
-        if (string.IsNullOrWhiteSpace(email)) throw new ArgumentException("Email cannot be null or empty");
-        if (dateOfBirth > DateOnly.FromDateTime(DateTime.Now)) throw new ArgumentException("Date of birth cannot be in the future");
+        GuardAgainst.NullOrEmpty(name, nameof(name));
+        GuardAgainst.NotEmail(email, nameof(email));
+        GuardAgainst.FutureDate(dateOfBirth, nameof(dateOfBirth));
 
         Name = name;
         Email = email;
