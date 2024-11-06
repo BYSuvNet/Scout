@@ -1,13 +1,16 @@
 using ScoutApp.Core;
 namespace ScoutApp.UI;
 
-class ScoutUI
+public class ScoutUI
 {
-    private ScoutRepository _repo;
+    private IScoutRepository _scoutRepo;
+    private IActivityRepository _activityRepo;
 
-    public ScoutUI(ScoutRepository repo)
+    public ScoutUI(IScoutRepository scoutRepo,
+                   IActivityRepository activityRepo)
     {
-        _repo = repo;
+        _scoutRepo = scoutRepo;
+        _activityRepo = activityRepo;
     }
 
     public void Run()
@@ -50,17 +53,28 @@ class ScoutUI
                 Environment.Exit(0);
                 break;
         }
+        Console.ReadKey();
     }
 
     private void ShowAllActivities()
     {
         Console.Clear();
         Console.WriteLine("KOMMANDE AKTIVITETER:");
-        foreach (var activity in _repo.GetUpcomingActivities())
+        foreach (var activity in _activityRepo.GetUpcomingActivities())
         {
-            Console.WriteLine(activity.Info);
+            Console.WriteLine($"Aktivitet: {activity.Name}");
+            Console.WriteLine($"Datum: {activity.Date}");
+            Console.Write("Deltagare: ");
+            if (activity.Participants.Count == 0)
+            {
+                Console.Write("Inga deltagare registrerare ännu");
+            }
+            foreach (var scout in activity.Participants)
+            {
+                Console.Write($"{scout.Name}, ");
+            }
+            Console.WriteLine("\n--------------------");
         }
-        Console.ReadKey();
     }
 
     private void CreateActivity()
@@ -68,9 +82,9 @@ class ScoutUI
         Console.Clear();
         string name = Input.GetString("Ange aktivitetens namn: ");
         DateTime date = Input.GetDateTime("Ange datum för aktiviteten: ");
-        _repo.AddActivity(new Activity(name, date));
+        //TODO handle exceptions!
+        _activityRepo.Add(new Activity(name, date));
         Console.WriteLine("Aktiviteten är skapad!");
-        Console.ReadKey();
     }
 
     private void RegisterScout()
@@ -79,19 +93,18 @@ class ScoutUI
         string name = Input.GetString("Namn: ");
         string email = Input.GetEmail("E-post: ");
         DateOnly dob = Input.GetDateOnly("Födelsedatum: ");
-        _repo.AddScout(name, email, dob);
+        //Todo: handle exceptions!
+        _scoutRepo.Add(new Scout(name, email, dob));
         Console.WriteLine("Scouten är registrerad!");
-        Console.ReadKey();
     }
 
     private void ShowAllScouts()
     {
         Console.Clear();
         Console.WriteLine("ALLA SCOUTER:");
-        foreach (var scout in _repo.GetAllScouts())
+        foreach (var scout in _scoutRepo.GetAll())
         {
             Console.WriteLine($"Namn: {scout.Name}, E-post: {scout.Email}, Ålder: {scout.Age}");
         }
-        Console.ReadKey();
     }
 }
