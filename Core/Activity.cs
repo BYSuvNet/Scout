@@ -2,7 +2,7 @@ namespace ScoutApp.Core;
 
 public class Activity
 {
-    public int Id { get; private set; }
+    public int Id { get; set; }
     public string Name { get; private set; }
     public DateTime Date { get; private set; }
     public List<Scout> Participants { get; private set; } = [];  //Se till så att en tom lista finns
@@ -18,6 +18,7 @@ public class Activity
 
     public void AddParticipant(Scout scout)
     {
+        Console.WriteLine($"Adding {scout.Name} to {Name}");
         Participants.Add(scout);
     }
 }

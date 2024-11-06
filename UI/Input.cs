@@ -73,4 +73,17 @@ static class Input
     {
         return System.Text.RegularExpressions.Regex.IsMatch(email, @"^\w+([-+.']\w+)*@(\[*\w+)([-.]\w+)*\.\w+([-.]\w+\])*$");
     }
+
+    public static int GetInt(string prompt)
+    {
+        do
+        {
+            Console.Write(prompt);
+            if (int.TryParse(Console.ReadLine(), out int number))
+            {
+                return number;
+            }
+            Console.WriteLine("Du måste ange ett heltal!");
+        } while (true);
+    }
 }

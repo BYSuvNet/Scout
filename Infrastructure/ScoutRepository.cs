@@ -15,6 +15,10 @@ class FakeScoutRepository : IScoutRepository
         _scouts.Add(new Scout("Lisa", "lisa@scouterna.se", new DateOnly(2006, 2, 2)));
         _scouts.Add(new Scout("Pelle", "pelle@scouterna.se", new DateOnly(2007, 3, 3)));
         _scouts.Add(new Scout("Anna", "anna@scouterna.se", new DateOnly(2008, 4, 4)));
+        _scouts[0].Id = 1;
+        _scouts[1].Id = 2;
+        _scouts[2].Id = 3;
+        _scouts[3].Id = 4;
     }
 
     public void Add(Scout s)

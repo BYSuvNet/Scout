@@ -5,12 +5,15 @@ public class ScoutUI
 {
     private IScoutRepository _scoutRepo;
     private IActivityRepository _activityRepo;
+    private ActivityService _activityService;
 
     public ScoutUI(IScoutRepository scoutRepo,
-                   IActivityRepository activityRepo)
+                   IActivityRepository activityRepo,
+                   ActivityService activityService)
     {
         _scoutRepo = scoutRepo;
         _activityRepo = activityRepo;
+        _activityService = activityService;
     }
 
     public void Run()
@@ -30,6 +33,7 @@ public class ScoutUI
         Console.WriteLine("B: Visa scoutregister");
         Console.WriteLine("C: Skapa aktivitet");
         Console.WriteLine("D: Kommande aktiviteter");
+        Console.WriteLine("E: Anmäl scout till aktivitet");
         Console.WriteLine("Q: Avsluta");
     }
 
@@ -49,11 +53,29 @@ public class ScoutUI
             case 'D':
                 ShowAllActivities();
                 break;
+            case 'E':
+                SignupScout();
+                break;
             case 'Q':
                 Environment.Exit(0);
                 break;
         }
         Console.ReadKey();
+    }
+
+    private void SignupScout()
+    {
+        int scoutId = Input.GetInt("Scoutens id: ");
+        int activityId = Input.GetInt("Aktivitetens id: ");
+        try
+        {
+            _activityService.SignupScoutToActivity(scoutId, activityId);
+            Console.WriteLine("Scouten är anmäld till aktiviteten!");
+        }
+        catch (KeyNotFoundException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
 
     private void ShowAllActivities()
@@ -104,7 +126,7 @@ public class ScoutUI
         Console.WriteLine("ALLA SCOUTER:");
         foreach (var scout in _scoutRepo.GetAll())
         {
-            Console.WriteLine($"Namn: {scout.Name}, E-post: {scout.Email}, Ålder: {scout.Age}");
+            Console.WriteLine($"{scout.Id} - Namn: {scout.Name}, E-post: {scout.Email}, Ålder: {scout.Age}");
         }
     }
 }

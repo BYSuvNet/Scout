@@ -1,9 +1,11 @@
 ﻿using ScoutApp.Core;
+using ScoutApp.Infrastructure;
 using ScoutApp.UI;
 
 FakeScoutRepository scoutRepo = new();
 FakeActivityRepository activityRepo = new();
+ActivityService activityService = new(activityRepo, scoutRepo);
 
-ScoutUI ui = new(scoutRepo, activityRepo); //Start UI och ge den referens till grundsystemet
+ScoutUI ui = new(scoutRepo, activityRepo, activityService);
 
-ui.Run(); //Kör igång huvudloopen
+ui.Run();

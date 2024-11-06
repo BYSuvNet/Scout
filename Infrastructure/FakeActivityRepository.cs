@@ -8,9 +8,12 @@ public class FakeActivityRepository : IActivityRepository
 
     public FakeActivityRepository()
     {
-        _activities.Add(new Activity("Hiking", DateTime.Now.AddDays(1)));
-        _activities.Add(new Activity("Swimming", DateTime.Now.AddDays(2)));
-        _activities.Add(new Activity("Camping", DateTime.Now.AddDays(3)));
+        _activities.Add(new Activity("Hajk", DateTime.Now.AddDays(1)));
+        _activities.Add(new Activity("Plocka svamp", DateTime.Now.AddDays(2)));
+        _activities.Add(new Activity("Leta mossa", DateTime.Now.AddDays(3)));
+        _activities[0].Id = 1;
+        _activities[1].Id = 2;
+        _activities[2].Id = 3;
     }
 
     public void Add(Activity a)
