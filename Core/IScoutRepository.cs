@@ -1,4 +1,4 @@
-using ScoutApp.Core;
+namespace ScoutApp.Core;
 
 public interface IScoutRepository
 {

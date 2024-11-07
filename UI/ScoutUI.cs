@@ -1,4 +1,5 @@
 using ScoutApp.Core;
+
 namespace ScoutApp.UI;
 
 public class ScoutUI
