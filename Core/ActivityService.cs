@@ -11,23 +11,57 @@ public class ActivityService
         _scoutRepository = scoutRepository;
     }
 
-    public void SignupScoutToActivity(int scoutId, int activityId)
+    public Result SignupScoutToActivity(int scoutId, int activityId)
+    {
+        var (scout, activity) = GetScoutAndActivity(scoutId, activityId);
+
+        if (IsAlreadySignedUpToActivity(scoutId, activity!))
+            return Result.Failure("Scout is already signed up for this activity");
+
+        if (IsSignedupToActivityOnSameDate(scoutId, activity!.Date))
+            return Result.Failure("Scout is already signed up for an activity at the same time");
+
+        UpdateActivity(scout!, activity);
+        return Result.Success();
+    }
+
+    private void UpdateActivity(Scout scout, Activity activity)
+    {
+        activity.AddParticipant(scout!);
+        _activityRepository.Update(activity);
+    }
+
+    private (Scout? scout, Activity? activity) GetScoutAndActivity(int scoutId, int activityId)
     {
         Scout? scout = _scoutRepository.GetById(scoutId);
         GuardAgainst.Null(scout, $"Scout with id {scoutId} not found");
 
-        var activity = _activityRepository.GetById(activityId);
+        Activity? activity = _activityRepository.GetById(activityId);
         GuardAgainst.Null(activity, $"Activity with id {activityId} not found");
 
-        //Make sure the activity is not in the past
+        // Make sure the activity is not in the past
         GuardAgainst.NotInFuture(activity!.Date, nameof(activity.Date));
 
-        //A Scout can only sign up for an activity once
-        if (activity.Participants.Any(s => s.Id == scoutId)) throw new ArgumentException("Scout is already signed up for this activity");
-
-        //TODO make sure scout is not already signed up for an activity on the same time and date
-
-        activity.AddParticipant(scout!);
-        _activityRepository.Update(activity);
+        return (scout, activity);
     }
+
+    private bool IsAlreadySignedUpToActivity(int scoutId, Activity activity)
+    {
+        return activity.Participants.Any(s => s.Id == scoutId);
+    }
+
+    private bool IsSignedupToActivityOnSameDate(int scoutId, DateTime date)
+    {
+        var activities = _activityRepository.GetUpcomingActivities();
+        return activities.Any(a => a.Date == date && a.Participants.Any(s => s.Id == scoutId));
+    }
+
+    /*
+        NOTES:
+        * Use GuardAgainst and exceptions for situations that represent unexpected or illegal state 
+          (e.g., null records, activity in the past).
+        * Use a Result type to signal expected, manageable conditions(e.g., scout already signed up, scheduling conflicts), 
+          providing feedback without throwing exceptions.
+    */
+
 }
