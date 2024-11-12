@@ -8,6 +8,7 @@ var options = new DbContextOptionsBuilder<ScoutAppDbContext>()
     .UseSqlite("Data Source=scoutapp.db").Options;
 using var context = new ScoutAppDbContext(options);
 
+//Test code to seed the database with some data
 context.Database.EnsureDeleted();
 context.Database.EnsureCreated();
 context.Activities.Add(new Activity("Plocka svamp", new DateTime(2024, 12, 24, 12, 00, 00)));
