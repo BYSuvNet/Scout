@@ -16,13 +16,13 @@ public class ActivityService
         var (scout, activity) = GetScoutAndActivity(scoutId, activityId);
 
         if (IsAlreadySignedUpToActivity(scoutId, activity!))
-            return Result.Failure("Scout is already signed up for this activity");
+            return Result.Failure($"The scout is already signed up for {activity!.Name}");
 
         if (IsSignedupToActivityOnSameDate(scoutId, activity!.Date))
-            return Result.Failure("Scout is already signed up for an activity at the same time");
+            return Result.Failure($"The scout is signed up for {activity!.Name} which is taking place at the same time.");
 
         UpdateActivity(scout!, activity);
-        return Result.Success();
+        return Result.Success($"Scout signed up to {activity.Name}");
     }
 
     private void UpdateActivity(Scout scout, Activity activity)

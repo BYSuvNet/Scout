@@ -70,8 +70,10 @@ public class ScoutUI
         int activityId = Input.GetInt("Aktivitetens id: ");
         try
         {
-            _activityService.SignupScoutToActivity(scoutId, activityId);
-            Console.WriteLine("Scouten är anmäld till aktiviteten!");
+            Result result = _activityService.SignupScoutToActivity(scoutId, activityId);
+            Console.ForegroundColor = result.IsSuccess ? ConsoleColor.Green : ConsoleColor.Red;
+            Console.WriteLine(result.Message);
+            Console.ResetColor();
         }
         catch (KeyNotFoundException ex)
         {

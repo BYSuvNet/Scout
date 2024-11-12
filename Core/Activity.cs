@@ -21,7 +21,6 @@ public class Activity
 
     public void AddParticipant(Scout scout)
     {
-        Console.WriteLine($"Adding {scout.Name} to {Name}");
         Participants.Add(scout);
     }
 }
